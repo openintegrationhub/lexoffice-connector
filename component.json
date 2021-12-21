@@ -1,0 +1,39 @@
+{
+   "title":"lexoffice",
+   "description":"lexoffice OIH Adapter",
+   "docsUrl":"https://github.com/openintegrationhub/lexoffice-connector",
+   "buildType":"docker",
+   "credentials":{
+      "fields":{
+         "token":{
+            "label":"Your username",
+            "required":true,
+            "viewClass":"TextFieldView",
+            "note":"Use the token you created for the <b>lexoffice</b> API",
+            "placeholder":"someApiToken"
+         },
+      }
+   },
+   "triggers":{
+      "getContactsPolling":{
+         "title":"Fetch new and updated Contacts",
+         "description":"Get lexoffice Contacts which have recently been modified or created",
+         "type":"polling",
+         "main":"./lib/triggers/getContactsPolling.js",
+         "metadata":{
+            "in":"./lib/schemas/getContacts.in.json",
+            "out":"./lib/schemas/getContacts.out.json"
+         }
+      },
+   },
+   "actions":{
+      "upsertContacts":{
+         "title":"Upsert a Contact in lexoffice",
+         "main":"./lib/actions/upsertContacts.js",
+         "metadata":{
+            "in":"./lib/schemas/upsertContacts.in.json",
+            "out":"./lib/schemas/upsertContacts.out.json"
+         }
+      },
+   }
+}
