@@ -1,9 +1,8 @@
-FROM node:10-alpine
-LABEL NAME="lexoffice connector"
-LABEL SUMMARY="This image is used to start the Snazzy Contacts Adapter for OIH"
+FROM node:16.0-alpine3.12
+LABEL NAME="lexoffice-connector"
+LABEL SUMMARY="This image is used to start the lexoffice Adapter for OIH"
 
 RUN apk --no-cache add \
-    python \
     make \
     g++ \
     libc6-compat

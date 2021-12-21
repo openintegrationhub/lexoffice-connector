@@ -11,7 +11,7 @@
             "viewClass":"TextFieldView",
             "note":"Use the token you created for the <b>lexoffice</b> API",
             "placeholder":"someApiToken"
-         },
+         }
       }
    },
    "triggers":{
@@ -24,7 +24,7 @@
             "in":"./lib/schemas/getContacts.in.json",
             "out":"./lib/schemas/getContacts.out.json"
          }
-      },
+      }
    },
    "actions":{
       "upsertContacts":{
@@ -34,6 +34,6 @@
             "in":"./lib/schemas/upsertContacts.in.json",
             "out":"./lib/schemas/upsertContacts.out.json"
          }
-      },
+      }
    }
 }
