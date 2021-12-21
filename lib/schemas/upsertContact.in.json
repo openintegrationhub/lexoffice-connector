@@ -1,0 +1,184 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "organizationId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "roles": {
+      "type": "object",
+      "properties": {
+        "customer": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "number"
+          ]
+        },
+        "vendor": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "number"
+          ]
+        }
+      },
+      "required": [
+        "customer",
+        "vendor"
+      ]
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "allowTaxFreeInvoices": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "allowTaxFreeInvoices"
+      ]
+    },
+    "addresses": {
+      "type": "object",
+      "properties": {
+        "billing": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "supplement": {
+                  "type": "string"
+                },
+                "street": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "countryCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "supplement",
+                "street",
+                "zip",
+                "city",
+                "countryCode"
+              ]
+            }
+          ]
+        },
+        "shipping": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "street": {
+                  "type": "string"
+                },
+                "zip": {
+                  "type": "string"
+                },
+                "city": {
+                  "type": "string"
+                },
+                "countryCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "street",
+                "zip",
+                "city",
+                "countryCode"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "billing",
+        "shipping"
+      ]
+    },
+    "emailAddresses": {
+      "type": "object",
+      "properties": {
+        "business": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "business"
+      ]
+    },
+    "phoneNumbers": {
+      "type": "object",
+      "properties": {
+        "business": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "private": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "required": [
+        "business",
+        "private"
+      ]
+    },
+    "archived": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "organizationId",
+    "version",
+    "roles",
+    "company",
+    "addresses",
+    "emailAddresses",
+    "phoneNumbers",
+    "archived"
+  ]
+}

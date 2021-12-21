@@ -3,7 +3,6 @@ LABEL NAME="lexoffice-connector"
 LABEL SUMMARY="This image is used to start the lexoffice Adapter for OIH"
 
 RUN apk --no-cache add \
-    python \
     make \
     g++ \
     libc6-compat
