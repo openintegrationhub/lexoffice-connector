@@ -41,9 +41,11 @@ describe('Triggers - getContacts', () => {
     expect(contacts[0].phoneNumbers).to.be.a('object');
     expect(contacts[0].phoneNumbers).to.not.be.empty;
 
+    expect(contacts[1].person).to.be.a('object');
+    expect(contacts[1].person.salutation).to.equal('Frau');
+    expect(contacts[1].person.firstName).to.equal('Jane');
+    expect(contacts[1].person.lastName).to.equal('Wayne');
 
-    expect(contacts[1].company).to.be.a('object');
-    expect(contacts[1].company.name).to.equal('Buy Mister');
     expect(contacts[1].roles).to.be.a('object');
     expect(contacts[1].roles.customer).to.be.a('object');
 

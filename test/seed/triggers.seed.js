@@ -70,9 +70,10 @@ const getContactsSuccessful = nock('https://api.lexoffice.io', {
             number: 10001,
           },
         },
-        company: {
-          name: 'Buy Mister',
-          allowTaxFreeInvoices: false,
+        person: {
+          salutation: 'Frau',
+          firstName: 'Jane',
+          lastName: 'Wayne',
         },
         addresses: {
           billing: [
