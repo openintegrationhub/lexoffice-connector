@@ -32,8 +32,17 @@ const createContactFailed = nock('https://api.lexoffice.io', {
   .reply(401, { message: 'Unauthorized' });
 
 
+const checkExistingEntry = nock('https://api.lexoffice.io', {
+  reqheaders: {
+    Authorization: 'Bearer SuperDuperToken',
+  },
+})
+  .get('/v1/contacts/ba23c271-67e2-4bfe-bb99-02b4b28836c1')
+  .reply(200, { version: 2 });
+
 module.exports = {
   createContactSuccessful,
   updateContactSuccessful,
   createContactFailed,
+  checkExistingEntry,
 };

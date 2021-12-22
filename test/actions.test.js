@@ -7,6 +7,7 @@ const {
   createContactSuccessful,
   updateContactSuccessful,
   upsertContactFailed,
+  checkExistingEntry,
 } = require('./seed/actions.seed');
 const { contacts } = require('./seed/seed');
 
@@ -19,6 +20,7 @@ describe('Actions - upsertContact', () => {
     createContactSuccessful;
     updateContactSuccessful;
     upsertContactFailed;
+    checkExistingEntry;
   });
 
   it('should create a contact', async () => {
