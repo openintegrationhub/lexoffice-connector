@@ -166,6 +166,9 @@ const organization = {
   logo: '',
   addresses: [{
     street: 'Somestraße', streetNumber: '1', zipcode: '12345', city: 'Testcity', uid: '6buq1kvs908ne', categories: [],
+  },
+  {
+    street: 'Somestraße', streetNumber: '2', zipcode: '12345', city: 'Testcity', uid: '6buq1kvs908nes',
   }],
   contactData: [{
     type: 'phone', value: '123456', uid: '6buq1kvs908ng', categories: [],
@@ -173,6 +176,9 @@ const organization = {
     type: 'fax', value: '1234567', uid: '6buq1kvs908nh', categories: [],
   }, {
     type: 'email', value: 'info@some.com', uid: '6buq1kvs908ni', categories: [],
+  },
+  {
+    type: 'fax', value: '007', uid: '6buq1kvs908nsh',
   }],
   uid: '6buq1kvs908nd',
   lastUpdate: 1636471715028,

@@ -66,10 +66,14 @@ describe('Transformations', () => {
     expect(result.data.addresses.billing[0].city).to.equal('Testcity');
     expect(result.data.addresses.billing[0].countryCode).to.equal('DE');
 
+    expect(result.data.addresses.billing.length).to.equal(1);
+
     expect(result.data.emailAddresses.business[0]).to.equal('info@some.com');
 
     expect(result.data.phoneNumbers.business[0]).to.equal('123456');
     expect(result.data.phoneNumbers.fax[0]).to.equal('1234567');
+
+    expect(result.data.phoneNumbers.fax.length).to.equal(1);
   });
 
 
